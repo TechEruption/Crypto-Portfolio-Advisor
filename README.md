@@ -313,6 +313,4 @@ MIT License - See LICENSE file for details
 
 This application is provided as-is for educational and testing purposes. Do not use with real funds on mainnet. Users are responsible for understanding the risks of cryptocurrency trading and portfolio management.
 
----
 
-**Built with ❤️ for Web3 developers**
