@@ -9,9 +9,9 @@ export function LineChartCard({ data, title = 'Price Trend' }: any) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="p-6 bg-bg-card rounded-2xl border border-accent-blue/10"
+      className="p-6 bg-bgCard rounded-2xl border border-accentBlue/10"
     >
-      <h3 className="text-lg font-bold text-text-primary mb-6">{title}</h3>
+      <h3 className="text-lg font-bold text-textPrimary mb-6">{title}</h3>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="rgba(59, 130, 246, 0.1)" />

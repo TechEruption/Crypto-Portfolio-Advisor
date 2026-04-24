@@ -59,24 +59,24 @@ export function PortfolioOverview({ data }: any) {
             ? 'text-success'
             : stat.color === 'danger'
               ? 'text-danger'
-              : 'text-accent-blue'
+              : 'text-accentBlue'
 
         return (
           <motion.div
             key={idx}
             variants={itemVariants}
             whileHover={{ y: -5 }}
-            className="p-6 bg-gradient-to-br from-bg-card to-bg-main rounded-2xl border border-accent-blue/10 hover:border-accent-blue/30 transition-all overflow-hidden group"
+            className="p-6 bg-gradient-to-br from-bgCard to-bgMain rounded-2xl border border-accentBlue/10 hover:border-accentBlue/30 transition-all overflow-hidden group"
           >
             {/* Gradient background glow */}
             <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity" />
 
             <div className="relative">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-text-muted text-sm font-medium">{stat.label}</h3>
+                <h3 className="text-textMuted text-sm font-medium">{stat.label}</h3>
                 <Icon className={`${colorClass} opacity-60 group-hover:opacity-100 transition-opacity`} />
               </div>
-              <p className="text-3xl font-bold text-text-primary mb-2">{stat.value}</p>
+              <p className="text-3xl font-bold text-textPrimary mb-2">{stat.value}</p>
               {stat.change !== undefined && (
                 <p className={`text-sm font-semibold ${stat.change >= 0 ? 'text-success' : 'text-danger'}`}>
                   {stat.change > 0 ? '↑' : '↓'} {Math.abs(stat.change).toFixed(2)}%

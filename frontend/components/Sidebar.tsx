@@ -20,7 +20,7 @@ export function Sidebar() {
     <motion.aside
       initial={{ x: -250 }}
       animate={{ x: 0 }}
-      className="fixed left-0 top-0 h-screen w-64 bg-bg-main border-r border-accent-blue/10 p-6 flex flex-col z-40"
+      className="fixed left-0 top-0 h-screen w-64 bg-bgMain border-r border-accentBlue/10 p-6 flex flex-col z-40"
     >
       {/* Logo */}
       <motion.div whileHover={{ scale: 1.05 }} className="mb-8">
@@ -29,8 +29,8 @@ export function Sidebar() {
             <span className="text-white font-bold">◆</span>
           </div>
           <div>
-            <h1 className="text-xl font-bold text-text-primary">Portfolio</h1>
-            <p className="text-xs text-text-muted">Advisor</p>
+            <h1 className="text-xl font-bold text-textPrimary">Portfolio</h1>
+            <p className="text-xs text-textMuted">Advisor</p>
           </div>
         </Link>
       </motion.div>
@@ -48,7 +48,7 @@ export function Sidebar() {
                 className={`p-3 rounded-lg flex items-center gap-3 transition-all cursor-pointer ${
                   isActive
                     ? 'bg-gradient-accent text-white'
-                    : 'text-text-muted hover:bg-bg-card hover:text-text-primary'
+                    : 'text-textMuted hover:bg-bgCard hover:text-textPrimary'
                 }`}
               >
                 <Icon size={20} />
@@ -63,7 +63,7 @@ export function Sidebar() {
       {/* Logout Button */}
       <motion.button
         whileHover={{ scale: 1.02 }}
-        className="w-full p-3 rounded-lg bg-bg-card border border-danger/20 text-danger hover:border-danger/50 transition-all flex items-center gap-2"
+        className="w-full p-3 rounded-lg bg-bgCard border border-danger/20 text-danger hover:border-danger/50 transition-all flex items-center gap-2"
       >
         <LogOut size={18} />
         <span className="font-medium">Disconnect</span>

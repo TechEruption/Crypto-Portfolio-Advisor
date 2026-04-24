@@ -11,12 +11,12 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -80 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-64 right-0 h-20 bg-bg-main/95 backdrop-blur-md border-b border-accent-blue/10 px-8 flex items-center justify-between z-30"
+      className="fixed top-0 left-64 right-0 h-20 bg-bgMain/95 backdrop-blur-md border-b border-accentBlue/10 px-8 flex items-center justify-between z-30"
     >
       {/* Left Side - Page Title */}
       <div>
-        <h2 className="text-2xl font-bold text-text-primary">Dashboard</h2>
-        <p className="text-sm text-text-muted">Welcome back to your portfolio</p>
+        <h2 className="text-2xl font-bold text-textPrimary">Dashboard</h2>
+        <p className="text-sm text-textMuted">Welcome back to your portfolio</p>
       </div>
 
       {/* Right Side - Controls */}
@@ -24,12 +24,12 @@ export function Navbar() {
         {/* Wallet Status */}
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="px-4 py-2 bg-bg-card rounded-lg border border-accent-blue/20 flex items-center gap-3"
+          className="px-4 py-2 bg-bgCard rounded-lg border border-accentBlue/20 flex items-center gap-3"
         >
           <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
           <div className="text-sm">
-            <p className="text-text-muted text-xs">Connected</p>
-            <p className="text-text-primary font-mono text-sm">0x12ab...9CdE</p>
+            <p className="text-textMuted text-xs">Connected</p>
+            <p className="text-textPrimary font-mono text-sm">0x12ab...9CdE</p>
           </div>
         </motion.div>
 
@@ -38,7 +38,7 @@ export function Navbar() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowBalance(!showBalance)}
-          className="p-2 rounded-lg bg-bg-card border border-accent-blue/10 hover:border-accent-blue/30 transition-all text-text-muted hover:text-accent-blue"
+          className="p-2 rounded-lg bg-bgCard border border-accentBlue/10 hover:border-accentBlue/30 transition-all text-textMuted hover:text-accentBlue"
         >
           {showBalance ? <Eye size={20} /> : <EyeOff size={20} />}
         </motion.button>
@@ -47,7 +47,7 @@ export function Navbar() {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 rounded-lg bg-bg-card border border-accent-blue/10 hover:border-accent-blue/30 transition-all text-text-muted hover:text-accent-blue relative"
+          className="p-2 rounded-lg bg-bgCard border border-accentBlue/10 hover:border-accentBlue/30 transition-all text-textMuted hover:text-accentBlue relative"
         >
           <Bell size={20} />
           <motion.div
@@ -60,7 +60,7 @@ export function Navbar() {
         <motion.button
           whileHover={{ scale: 1.1, rotate: 20 }}
           whileTap={{ scale: 0.95 }}
-          className="p-2 rounded-lg bg-bg-card border border-accent-blue/10 hover:border-accent-blue/30 transition-all text-text-muted hover:text-accent-blue"
+          className="p-2 rounded-lg bg-bgCard border border-accentBlue/10 hover:border-accentBlue/30 transition-all text-textMuted hover:text-accentBlue"
         >
           <Settings size={20} />
         </motion.button>

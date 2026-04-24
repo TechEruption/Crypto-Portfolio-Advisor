@@ -52,7 +52,7 @@ export function SecondaryButton({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className={`px-6 py-3 bg-bg-card text-text-primary rounded-lg font-semibold border border-accent-blue/20 transition-all hover:border-accent-blue/50 ${className}`}
+      className={`px-6 py-3 bg-bgCard text-textPrimary rounded-lg font-semibold border border-accentBlue/20 transition-all hover:border-accentBlue/50 ${className}`}
     >
       {children}
     </motion.button>
@@ -67,7 +67,7 @@ export function Spinner({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
     lg: 'w-12 h-12',
   }
   return (
-    <div className={`${sizes[size]} border-2 border-accent-blue/20 border-t-accent-blue rounded-full animate-spin`} />
+    <div className={`${sizes[size]} border-2 border-accentBlue/20 border-t-accentBlue rounded-full animate-spin`} />
   )
 }
 
@@ -89,7 +89,7 @@ export function Toast({
   const bgColors = {
     success: 'bg-success/20 border-success',
     error: 'bg-danger/20 border-danger',
-    info: 'bg-accent-blue/20 border-accent-blue',
+    info: 'bg-accentBlue/20 border-accentBlue',
   }
 
   return (
@@ -97,7 +97,7 @@ export function Toast({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
-      className={`fixed bottom-4 right-4 px-4 py-3 rounded-lg border ${bgColors[type]} text-text-primary`}
+      className={`fixed bottom-4 right-4 px-4 py-3 rounded-lg border ${bgColors[type]} text-textPrimary`}
     >
       {message}
     </motion.div>
@@ -107,7 +107,7 @@ export function Toast({
 // Skeleton Loader
 export function Skeleton({ className = '' }: { className?: string }) {
   return (
-    <div className={`bg-bg-card rounded-lg animate-pulse ${className}`} />
+    <div className={`bg-bgCard rounded-lg animate-pulse ${className}`} />
   )
 }
 
@@ -126,14 +126,14 @@ export function StatCard({
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="p-6 bg-bg-card rounded-2xl border border-accent-blue/10 hover:border-accent-blue/30 transition-all"
+      className="p-6 bg-bgCard rounded-2xl border border-accentBlue/10 hover:border-accentBlue/30 transition-all"
     >
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-text-muted text-sm font-medium">{label}</h3>
+        <h3 className="text-textMuted text-sm font-medium">{label}</h3>
         {icon && <div className="text-2xl">{icon}</div>}
       </div>
       <div className="flex items-baseline gap-2">
-        <p className="text-2xl font-bold text-text-primary">{value}</p>
+        <p className="text-2xl font-bold text-textPrimary">{value}</p>
         {change && (
           <span className={`text-sm font-semibold ${change.color === 'success' ? 'text-success' : change.color === 'danger' ? 'text-danger' : 'text-warning'}`}>
             {change.value > 0 ? '+' : ''}{change.value}%
@@ -155,7 +155,7 @@ export function AlertBox({
   message: string
 }) {
   const bgColors = {
-    info: 'bg-accent-blue/10 border-accent-blue text-accent-blue',
+    info: 'bg-accentBlue/10 border-accentBlue text-accentBlue',
     success: 'bg-success/10 border-success text-success',
     warning: 'bg-warning/10 border-warning text-warning',
     error: 'bg-danger/10 border-danger text-danger',
@@ -180,7 +180,7 @@ export function Badge({
   size?: 'sm' | 'md' | 'lg'
 }) {
   const colors = {
-    blue: 'bg-accent-blue/20 text-accent-blue',
+    blue: 'bg-accentBlue/20 text-accentBlue',
     success: 'bg-success/20 text-success',
     warning: 'bg-warning/20 text-warning',
     danger: 'bg-danger/20 text-danger',
